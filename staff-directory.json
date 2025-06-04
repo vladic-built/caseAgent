@@ -1,0 +1,124 @@
+{
+  "staff": [
+    {
+      "id": 1,
+      "name": "Sarah Chen",
+      "role": "Chief Executive Officer",
+      "department": "Executive",
+      "email": "sarah.chen@company.com",
+      "phone": "+1 (555) 123-4567",
+      "extension": "001",
+      "location": "New York, NY",
+      "reports_to": null,
+      "start_date": "2019-01-15"
+    },
+    {
+      "id": 2,
+      "name": "Michael Rodriguez",
+      "role": "Chief Technology Officer",
+      "department": "Engineering",
+      "email": "michael.rodriguez@company.com",
+      "phone": "+1 (555) 123-4568",
+      "extension": "002",
+      "location": "San Francisco, CA",
+      "reports_to": "Sarah Chen",
+      "start_date": "2019-03-01"
+    },
+    {
+      "id": 3,
+      "name": "Emily Johnson",
+      "role": "Senior Software Engineer",
+      "department": "Engineering",
+      "email": "emily.johnson@company.com",
+      "phone": "+1 (555) 123-4569",
+      "extension": "101",
+      "location": "San Francisco, CA",
+      "reports_to": "Michael Rodriguez",
+      "start_date": "2020-06-15"
+    },
+    {
+      "id": 4,
+      "name": "David Kim",
+      "role": "Product Manager",
+      "department": "Product",
+      "email": "david.kim@company.com",
+      "phone": "+1 (555) 123-4570",
+      "extension": "201",
+      "location": "Seattle, WA",
+      "reports_to": "Sarah Chen",
+      "start_date": "2020-02-10"
+    },
+    {
+      "id": 5,
+      "name": "Lisa Zhang",
+      "role": "UX Designer",
+      "department": "Design",
+      "email": "lisa.zhang@company.com",
+      "phone": "+1 (555) 123-4571",
+      "extension": "301",
+      "location": "Austin, TX",
+      "reports_to": "David Kim",
+      "start_date": "2021-01-20"
+    },
+    {
+      "id": 6,
+      "name": "James Wilson",
+      "role": "DevOps Engineer",
+      "department": "Engineering",
+      "email": "james.wilson@company.com",
+      "phone": "+1 (555) 123-4572",
+      "extension": "102",
+      "location": "Denver, CO",
+      "reports_to": "Michael Rodriguez",
+      "start_date": "2020-09-01"
+    },
+    {
+      "id": 7,
+      "name": "Maria Garcia",
+      "role": "Marketing Manager",
+      "department": "Marketing",
+      "email": "maria.garcia@company.com",
+      "phone": "+1 (555) 123-4573",
+      "extension": "401",
+      "location": "Los Angeles, CA",
+      "reports_to": "Sarah Chen",
+      "start_date": "2019-11-05"
+    },
+    {
+      "id": 8,
+      "name": "Robert Taylor",
+      "role": "Sales Director",
+      "department": "Sales",
+      "email": "robert.taylor@company.com",
+      "phone": "+1 (555) 123-4574",
+      "extension": "501",
+      "location": "Chicago, IL",
+      "reports_to": "Sarah Chen",
+      "start_date": "2018-08-12"
+    },
+    {
+      "id": 9,
+      "name": "Jennifer Brown",
+      "role": "HR Manager",
+      "department": "Human Resources",
+      "email": "jennifer.brown@company.com",
+      "phone": "+1 (555) 123-4575",
+      "extension": "601",
+      "location": "New York, NY",
+      "reports_to": "Sarah Chen",
+      "start_date": "2019-05-20"
+    },
+    {
+      "id": 10,
+      "name": "Alex Thompson",
+      "role": "Data Scientist",
+      "department": "Engineering",
+      "email": "alex.thompson@company.com",
+      "phone": "+1 (555) 123-4576",
+      "extension": "103",
+      "location": "Boston, MA",
+      "reports_to": "Michael Rodriguez",
+      "start_date": "2021-03-08"
+    }
+  ]
+} 
