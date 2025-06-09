@@ -1,0 +1,765 @@
+# PROCESSED DOCUMENTS SUMMARY
+
+**Total document chunks:** 20  
+**Generated on:** 2025-06-08 14:02:50
+
+## FILES SUMMARY
+
+📄 **diagnostic_imaging.md:** 1 chunks, 564 total tokens  
+└── Single complete document
+
+📄 **lab_results.md:** 1 chunks, 710 total tokens  
+└── Single complete document
+
+📄 **past_medical_history.md:** 1 chunks, 432 total tokens  
+└── Single complete document
+
+📄 **patient_info.md:** 1 chunks, 267 total tokens  
+└── Single complete document
+
+📄 **transcript.md:** 16 chunks, 10753 total tokens  
+└── Split into 16 chunks
+
+---
+
+## DETAILED DOCUMENT CHUNKS
+
+### CHUNK 1
+
+- **ID:** 6789_DIAGNOSTIC_IMAGING_0
+- **Patient ID:** 6789
+- **Type:** diagnostic_imaging
+- **Source File:** diagnostic_imaging.md
+- **Token Count:** 564
+- **Chunk Index:** 1 of 1
+- **Complete Document:** True
+- **Timestamp:** 2025-06-08T14:02:50.934876
+
+**Text Preview (first 300 chars):**
+```
+# Diagnostic Imaging Report - Ethan Rodriguez
+
+## Patient Information
+- **Name:** Ethan Rodriguez
+- **DOB:** 06/12/1998
+- **Date of Imaging:** 02/28/2024
+- **Imaging Facility:** Walter Reed National Military Medical Center
+
+## X-Ray Studies
+
+### Lower Extremity Series
+#### Left Ankle X-Ray
+- **Findi...
+```
+
+**Full Text:**
+```
+# Diagnostic Imaging Report - Ethan Rodriguez
+
+## Patient Information
+- **Name:** Ethan Rodriguez
+- **DOB:** 06/12/1998
+- **Date of Imaging:** 02/28/2024
+- **Imaging Facility:** Walter Reed National Military Medical Center
+
+## X-Ray Studies
+
+### Lower Extremity Series
+#### Left Ankle X-Ray
+- **Findings:**
+  - Mild ligament laxity
+  - Slight anterior talofibular ligament strain
+  - No acute fractures detected
+  - Evidence of previous soft tissue trauma
+- **Impression:** Chronic ankle instability consistent with service-related injury
+
+#### Bilateral Knee X-Rays
+- **Findings:**
+  - Mild patellofemoral joint space narrowing
+  - Slight medial compartment osteoarthritic changes
+  - No significant structural abnormalities
+- **Impression:** Early-onset degenerative changes, likely related to repetitive stress
+
+### Spine X-Ray (Lumbar)
+- **Findings:**
+  - Mild lumbar lordosis
+  - L4-L5 disc space slight narrowing
+  - No acute vertebral fractures
+  - Muscular asymmetry suggesting chronic strain
+- **Impression:** Chronic lower back strain with early degenerative changes
+
+## MRI Studies
+
+### Left Ankle MRI
+- **Findings:**
+  - Partial anterior talofibular ligament tear
+  - Minor synovial inflammation
+  - Slight bone marrow edema in talus
+- **Impression:** Chronic ankle injury with partial ligament damage
+
+### Lumbar Spine MRI
+- **Findings:**
+  - Mild disc bulging at L4-L5 level
+  - Slight neural foraminal narrowing
+  - No significant nerve root compression
+- **Impression:** Chronic mechanical lower back pain with minimal structural changes
+
+## CT Scan
+
+### Temporal Bone CT (Ear Evaluation)
+- **Findings:**
+  - Slight asymmetry in middle ear structures
+  - Evidence of previous ear infection
+  - Minor tympanic membrane scarring
+- **Impression:** Service-related ear damage with persistent inflammatory changes
+
+## Musculoskeletal Ultrasound
+- **Areas Examined:** Ankles, Knees, Lower Back
+- **Findings:**
+  - Increased soft tissue inflammation
+  - Evidence of chronic mechanical stress
+  - No acute tears or ruptures detected
+
+## Radiologist's Summary
+- Multiple imaging studies confirm service-related musculoskeletal stress
+- Chronic changes consistent with military service activities
+- Recommend continued physical therapy and pain management
+- No immediate surgical intervention required
+
+**Radiologist:** Dr. Michael Thompson
+**Date of Report:** 03/05/2024
+```
+
+---
+
+### CHUNK 2
+
+- **ID:** 6789_LAB_RESULTS_0
+- **Patient ID:** 6789
+- **Type:** lab_results
+- **Source File:** lab_results.md
+- **Token Count:** 710
+- **Chunk Index:** 1 of 1
+- **Complete Document:** True
+- **Timestamp:** 2025-06-08T14:02:50.937864
+
+**Text Preview (first 300 chars):**
+```
+# Laboratory Results - Ethan Rodriguez
+
+## Patient Information
+- **Name:** Ethan Rodriguez
+- **DOB:** 06/12/1998
+- **Date of Collection:** 03/15/2024
+- **Ordering Physician:** Dr. Emily Chen, VA Medical Center
+
+## Complete Blood Count (CBC)
+| Test | Result | Reference Range | Units | Status |
+|-----...
+```
+
+**Full Text:**
+```
+# Laboratory Results - Ethan Rodriguez
+
+## Patient Information
+- **Name:** Ethan Rodriguez
+- **DOB:** 06/12/1998
+- **Date of Collection:** 03/15/2024
+- **Ordering Physician:** Dr. Emily Chen, VA Medical Center
+
+## Complete Blood Count (CBC)
+| Test | Result | Reference Range | Units | Status |
+|------|--------|----------------|-------|--------|
+| WBC | 7.2 | 4.5-11.0 | 10³/µL | Normal |
+| RBC | 5.1 | 4.5-5.9 | 10⁶/µL | Normal |
+| Hemoglobin | 15.2 | 13.5-17.5 | g/dL | Normal |
+| Hematocrit | 44.3 | 41.5-50.4 | % | Normal |
+| Platelets | 250 | 150-450 | 10³/µL | Normal |
+
+## Comprehensive Metabolic Panel
+| Test | Result | Reference Range | Units | Status |
+|------|--------|----------------|-------|--------|
+| Glucose | 96 | 70-99 | mg/dL | Normal |
+| Sodium | 140 | 135-145 | mmol/L | Normal |
+| Potassium | 4.2 | 3.5-5.0 | mmol/L | Normal |
+| CO₂ | 24 | 23-29 | mmol/L | Normal |
+| BUN | 15 | 7-20 | mg/dL | Normal |
+| Creatinine | 0.9 | 0.6-1.2 | mg/dL | Normal |
+| Calcium | 9.5 | 8.5-10.2 | mg/dL | Normal |
+
+## Hormone and Inflammatory Markers
+| Test | Result | Reference Range | Units | Status |
+|------|--------|----------------|-------|--------|
+| Cortisol | 15.3 | 6.0-23.0 | µg/dL | Normal |
+| Testosterone | 520 | 300-1000 | ng/dL | Normal |
+| C-Reactive Protein | 3.2 | 0-3.0 | mg/L | Slightly Elevated |
+
+## Psychological Health Markers
+| Test | Result | Interpretation |
+|------|--------|----------------|
+| PTSD Screening | Positive | Consistent with previous diagnosis |
+| Anxiety Index | Moderate-Severe | Requires ongoing psychological support |
+| Depression Scale | Severe | Consistent with clinical depression |
+
+## Dermatological Screening
+| Test | Result | Interpretation |
+|------|--------|----------------|
+| Molluscum Contagiosum Viral Test | Positive | Active infection confirmed |
+| Skin Biopsy | Consistent with diagnosis | No malignant changes detected |
+
+## Hearing Test Results
+| Test | Right Ear | Left Ear | Interpretation |
+|------|----------|----------|----------------|
+| Pure Tone Audiometry | Mild Loss | Moderate Loss | Consistent with service-related hearing damage |
+
+## Additional Notes
+- Mild inflammatory response detected
+- Psychological markers indicate need for continued mental health support
+- No significant systemic health concerns identified
+- Recommended follow-up with VA Mental Health Services and Dermatology
+
+**Examining Physician:** Dr. Emily Chen
+**Date of Report:** 03/20/2024
+```
+
+---
+
+### CHUNK 3
+
+- **ID:** 6789_PAST_MEDICAL_HISTORY_0
+- **Patient ID:** 6789
+- **Type:** past_medical_history
+- **Source File:** past_medical_history.md
+- **Token Count:** 432
+- **Chunk Index:** 1 of 1
+- **Complete Document:** True
+- **Timestamp:** 2025-06-08T14:02:50.939453
+
+**Text Preview (first 300 chars):**
+```
+# Past Medical History - Ethan Rodriguez
+
+## Patient Demographics
+- **Name:** Ethan Rodriguez
+- **DOB:** 06/12/1998
+- **Gender:** Male
+- **Service Branch:** United States Marine Corps
+
+## Medical History
+
+### Chronic Conditions
+1. **Musculoskeletal Disorders**
+   - Left Ankle Instability
+   - Bilate...
+```
+
+**Full Text:**
+```
+# Past Medical History - Ethan Rodriguez
+
+## Patient Demographics
+- **Name:** Ethan Rodriguez
+- **DOB:** 06/12/1998
+- **Gender:** Male
+- **Service Branch:** United States Marine Corps
+
+## Medical History
+
+### Chronic Conditions
+1. **Musculoskeletal Disorders**
+   - Left Ankle Instability
+   - Bilateral Knee Pain
+   - Lower Back Strain
+   - Fallen Arches (Pes Planus)
+
+2. **Dermatological Conditions**
+   - Molluscum Contagiosum (Diagnosed 01/2024)
+   - Ongoing treatment with topical medication
+
+3. **Psychological Conditions**
+   - Post-Traumatic Stress Disorder (PTSD)
+   - Severe Anxiety
+   - Major Depressive Disorder
+   - Currently under psychiatric care
+
+### Surgical History
+- None
+
+### Allergies
+- No known drug allergies
+- No known food allergies
+
+### Immunization History
+- Standard Military Vaccinations up to date
+- COVID-19 Vaccination (Moderna, Complete Series)
+- Annual Influenza Vaccine
+
+### Medications
+1. **Current Medications**
+   - Discontinued: Sertraline (Zoloft) - Due to side effects
+   - Ibuprofen 600mg (PRN for pain management)
+
+2. **Medication Allergies**
+   - None documented
+
+### Social History
+- Occupation: Security Guard
+- Residence: 3rd Floor Apartment in Maryland
+- Relationship Status: Long-term Relationship
+- Substance Use:
+  - Alcohol: Social drinking
+  - Tobacco: None
+  - Recreational Drugs: None
+
+### Family Medical History
+- Limited information available
+- No known hereditary conditions reported
+
+## Service-Related Medical Concerns
+- Metro Sexual Assault Incident (2020)
+- Repeated Physical Strain from Military Service
+- Ear Infection with Persistent Complications
+
+## Recommendations
+- Continued psychological counseling
+- Physical therapy for musculoskeletal issues
+- Ongoing dermatological treatment
+- VA Disability Claim in Process
+```
+
+---
+
+### CHUNK 4
+
+- **ID:** 6789_MEDICAL_DOCUMENT_0
+- **Patient ID:** 6789
+- **Type:** medical_document
+- **Source File:** patient_info.md
+- **Token Count:** 267
+- **Chunk Index:** 1 of 1
+- **Complete Document:** True
+- **Timestamp:** 2025-06-08T14:02:50.942450
+
+**Text Preview (first 300 chars):**
+```
+# Patient Information
+
+## Personal Details
+- **Service Date:** 2020-01-15
+- **Date of Birth:** 1998-06-12
+- **Combat Veteran:** Yes
+- **Marital Status:** Not Married
+- **Dependents Under 18:** 0
+- **Current VA Rating:** 0%
+- **Referred By:** Veterans Support Organization
+
+## Account and Contact Info...
+```
+
+**Full Text:**
+```
+# Patient Information
+
+## Personal Details
+- **Service Date:** 2020-01-15
+- **Date of Birth:** 1998-06-12
+- **Combat Veteran:** Yes
+- **Marital Status:** Not Married
+- **Dependents Under 18:** 0
+- **Current VA Rating:** 0%
+- **Referred By:** Veterans Support Organization
+
+## Account and Contact Information
+- **User ID:** VET_MARINE_2024_001
+- **First Name:** Ethan
+- **Last Name:** Rodriguez
+- **Email:** ethan.rodriguez@veterans.com
+- **Phone:** 202-555-0173
+- **Phone Type:** Mobile
+- **Timezone:** America/New_York
+
+## Military Status
+- **Discharge Type:** Honorable
+- **Military Status:** Discharged
+- **Active Status:** Yes
+- **Vietnam Veteran:** No
+
+## Additional Identifiers
+- **Partner ID:** NICOLE_PARTNER_2024
+- **Stripe ID:** STRIPE_VET_2024
+- **QuickBooks Customer ID:** QB_VET_2024_001
+- **State:** Maryland
+- **Social Security Number:** 123-45-6789
+```
+
+---
+
+### CHUNK 5
+
+- **ID:** 6789_TRANSCRIPT_0
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 2
+- **Chunk Index:** 1 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.975650
+
+**Text Preview (first 300 chars):**
+```
+# Transcript...
+```
+
+**Full Text:**
+```
+# Transcript
+```
+
+---
+
+### CHUNK 6
+
+- **ID:** 6789_TRANSCRIPT_1
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 721
+- **Chunk Index:** 2 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.977620
+
+**Text Preview (first 300 chars):**
+```
+"Alright. Can you hear me? Can. Can you hear me? I can. Alright. So this is new software that we just really started. So The idea it looks like it's working. Alright. The idea behind this is it basically records our converse conversation. And uses Ai software to generate your personal statements. Ye...
+```
+
+**Full Text:**
+```
+"Alright. Can you hear me? Can. Can you hear me? I can. Alright. So this is new software that we just really started. So The idea it looks like it's working. Alright. The idea behind this is it basically records our converse conversation. And uses Ai software to generate your personal statements. Yeah. It's it's big news. Alright. So This will honestly having a few... Like, I'm gonna pull up what you and you and Christian talked about. Let me see if I can go back to it. See. Also, I think it would be more accurate if we went through that questionnaire I did because while was doing that, I thought of more things that I have Okay. Let me see if I can pull both these up at the same time. Let's see. So basically, what we do is we'll just kinda talk about it. Okay. So break this off. Alright. Sorry. I'm like, tests. Got a few things going on. I'm I'm still doing the laser en grieving. So I got 1 of those... In the background kinda my my my garage right now. Yeah. So Yeah. Alright. Cool. So 1 of the first things you said, are you experiencing any dermatology or dermatology technological logical symptoms. Scars, yes, skin disease are rashes. Yes. So tell me what... Yes. Tell me a little bit about that. So when I... So at the beginning of this year in January, I started noticing some bumps on me in my general area. And then after about a week or so of that, I went... Actually, I'm not sure if it was a week. I would have to look through my paperwork to see specifically when I went in. But I eventually went in to walter reed dermatology to figure out what's what's going on? And they diagnosed me with Mo con. And it's a pretty common disease. It they they couldn't tell me when I got it because it has a long incubation period. So... But they gave me a medicine called Gosh. I can't pronounce it, but I still have it. And essentially, it's a blistering agent. So you put it on your skin and what it does is is it add tapes the skin makes it blister, and then it lifts the bump off basically. And they instructed me, to use that on my gen area. Well, my general little area was blistering that week. The dosage is twice a day for 3 days, and then 4 days, you let it relax. Okay. And with this, I had massive blistering, which caused a little bit of scarring, there's, like black dots. Or black marks on my in my general area? Yeah. And Currently, I still have Mu cut, but it's spread... It's less in the general area and now it's spread up to my chest. Okay. So reoccurring, and you are seeing... Okay. So seeing foreign service treated with some medicine that caused scars and are still having these these injuries affecting you. Okay. So 1 of the things that is very important and kind of assist with like, how you get rated is how it affects your day to day life. Mh. So I know we'll weird maybe a little strange talking to me about this. But it is important for the personal statements. If you prefer what we can do is I'm gonna get with Christian after this, I'll have him look
+```
+
+---
+
+### CHUNK 7
+
+- **ID:** 6789_TRANSCRIPT_2
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 720
+- **Chunk Index:** 3 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.978620
+
+**Text Preview (first 300 chars):**
+```
+weird maybe a little strange talking to me about this. But it is important for the personal statements. If you prefer what we can do is I'm gonna get with Christian after this, I'll have him look through the, basically the the script of what we talked about. If you prefer to talking about, specifica...
+```
+
+**Full Text:**
+```
+weird maybe a little strange talking to me about this. But it is important for the personal statements. If you prefer what we can do is I'm gonna get with Christian after this, I'll have him look through the, basically the the script of what we talked about. If you prefer to talking about, specifically how it affects your day day life, You can type it in afterwards. It's up to you whenever you're comfortable with. I'm I'm okay. I it's it is what it is. This is way to assist you. So what... Whatever you're comfortable talking about. Right? Well, I think I wanna talk about it. Okay. Very well. So how it affects me day to day is sexually, you know, there's still bumps there. So I'm sexually restricted. You know, I'm not gonna risk. Spreading it to another person. Yep. And I I am with Nicole. She's my girlfriend. We're living together. So it's put put a strainer on our relationship sexually because she... I mean, she's very She has a high lab. She she wants it. And she understands, but you know, we just can't have sex. Yeah. Until it's completely resolved. And that's definitely putting a a huge trainer on a our relationship because we're we're used to both having High Lo veto and having that as a central part of our relationship. Okay. And the the scarring, it's embarrassing for the same fax. Like, it's that that scars on on my penis, like, it's just embarrassing to be there. And... Yeah, That's generally how it affects affects. Me personally. Okay. Again, if you think of more stuff, you'll be able to edit these statements. Mh. And I I know we're also on a on a time here as well because you only got an hour break. So I'm not trying to spend crazy amount of time on everything. You can add to it, but this will also... It'll kinda give you something to look back at, like, because I can send you most. And you can kinda look back at it. I'm was looking at... Are you experiencing... I think this has to do with the same thing. It was art gen symptoms. Is this the same thing? Okay. Yes. That is the same thing. Okay. Alright. So we'll move on to the next 1. Are you experiencing any ear nose, throat symptoms? I think it's... To you checked yes for tonight in hearing loss? So I mean, I didn't really know which 1 to check on there. My final hearing test did document a little bit of hearing loss. Okay. And, yeah, it's just a little bit more difficult to to hear people... It's It's, like, I don't constantly have to ask people to repeat. Yeah. And what the the biggest thing is that after an ear infection that I had after a swimming Pt t with sergeant Williams. I had an ear infection. I tried to go into medical sick call, but they wouldn't see me about it. So then I had to make an appointment and then go back to the navy yard. And they're like, wow. That's a really bad ear infection. If you let this go on any longer, it could it become a bone or blood infection. So I got that taken care of. They cleaned my ears out and then put drops in it. I was taking medicine.
+```
+
+---
+
+### CHUNK 8
+
+- **ID:** 6789_TRANSCRIPT_3
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 711
+- **Chunk Index:** 4 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.980620
+
+**Text Preview (first 300 chars):**
+```
+ear infection. If you let this go on any longer, it could it become a bone or blood infection. So I got that taken care of. They cleaned my ears out and then put drops in it. I was taking medicine. And ever since then I've had this pain that comes and goes, usually the last I mean, right now, I'm no...
+```
+
+**Full Text:**
+```
+ear infection. If you let this go on any longer, it could it become a bone or blood infection. So I got that taken care of. They cleaned my ears out and then put drops in it. I was taking medicine. And ever since then I've had this pain that comes and goes, usually the last I mean, right now, I'm not having it, but it's just, like, the inside of my ear will be extremely sensitive. So if there's any pooling, tugging, rubbing or touch like, anything on the outside of my ear, it it is pretty up there pain. I'd put it at, like, an 8, but it's very short and it prevents me from putting in ear earbuds or wearing a headphones, so it makes listening to music difficult. For especially for longer periods of time. Okay. And it... It's just really uncomfortable. Okay. Yeah. I mean, III can imagine. Definitely can be not ideal that especially ear pain, there's not much you can do you most of Mh. The important stuff is kind of inside your head. Right? So is there anything besides wearing like earbuds that makes it worse? Nicole, she's actually rubbed against it quite a bit whenever we're c. So it makes it difficult for us to cuddle every now and then and be close, especially when we're laying down on the couch or bed. I have to lay a certain way. I have to actually... So the way I have to lay is I sleep on the left side of the bed so I have face away for her. So I'm not sleeping on the ear. Okay. This is give me 1. I'm gonna have to do a little bit of research on for, like, the specific like, what this could be diagnosed with? Yeah. I'm I'm going to see the ear nose and throat. Specialist at the Va. I was referred to them by my primary doctor, but they haven't reached out to me. So I'm gonna have to reach back out to them. Okay. Yeah. This is gonna be 1 that I think we can obviously start this personal statement kinda hopefully, from what's happening right now. But we can start this personal statement. And then once we get a diagnosis. Right? That's that's that's another claim. That's not normal. And it's kind of for you. It seems like it's unpredictable. Obviously, there's certain things that that cause it. Right? But, like, it's restricting you from wearing headphones, we're restricting you from, like, being close, like, the way you sleep is being affected by this. And if you're that person that likes to sleep on your side or whatever, that's definitely gonna affect the way you're sleeping and, like, the... Like, how comfortable believe are while you're like laying down. So again, we'll... When after the... You see the your nose throat doctor. Definitely... We can continue to revisit this and see what could have caused that? Because that's definitely something that's not gonna be... It's not just gonna go away. Right? Like, it's gonna be Yeah. Something you're gonna deal with for a while. It's been around for about 2 years. Yeah. So yeah. We'll... Once you get seen... Hope like, push to get a diagnosis that's gonna be... That's very important. They're
+```
+
+---
+
+### CHUNK 9
+
+- **ID:** 6789_TRANSCRIPT_4
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 734
+- **Chunk Index:** 5 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.981588
+
+**Text Preview (first 300 chars):**
+```
+gonna deal with for a while. It's been around for about 2 years. Yeah. So yeah. We'll... Once you get seen... Hope like, push to get a diagnosis that's gonna be... That's very important. They're probably gonna want you to go do more tests and stuff like that. But Mh. Definitely get the diagnosis bec...
+```
+
+**Full Text:**
+```
+gonna deal with for a while. It's been around for about 2 years. Yeah. So yeah. We'll... Once you get seen... Hope like, push to get a diagnosis that's gonna be... That's very important. They're probably gonna want you to go do more tests and stuff like that. But Mh. Definitely get the diagnosis because that's... You need the diagnosis you've already related it to... Because you did you didn't have these issues. I'm assuming prior to the ear infection. So you... It's now connected to AAA Pt event that you did wall in the marine corps. So the the really what we need from this is is just to actually get in diagnosis following that. Right? So we'll we'll move on to the next 1, but we'll kinda come back to that later on. Right. Put node in it. Are you experiencing any gastrointestinal symptoms? You said yes. I'm sure. I think you said esophageal disorders? Yes. So 1 thing is that this isn't... A new condition, but it was worsened by the marine corps. Okay. So actually, So I was just diagnosed. This happened a couple, like, 2 weeks ago or so where I was eating steak and you know, because of boot camp, like, I'm always used to just scarf down food. Like, I just take it down as fast as I can and, you know, my friends and family or people that eat with that they've noted it down a lot. And 1 night, I came back from work, and I started choking on a piece of steak and it was not coming up no matter what. And I was still able to breathe, but it was it was in a weird place where I couldn't swallow. I couldn't bring anything up, but I could still barely breathe. So they... I went to the to Walter Reed because I still had Tricare. And I was in the. Gosh. I was choking on that thing for, like, 6 hours before they were able to pop it out, but they had G doctor. I think they're called but gastrointestinal. And While they took it out, they took a biopsy of the inside of my throat, and I have a genetic disorder that makes me much more likely. To joke on food. Mh And because of the habit that I have of just scarf down food, like, I... Now I I'm used to doing that. But now I I've now knowing that I have this disorder. I really have to take my time, cut everything up and process my food a lot, like much more than normal. Is that the first time you've had, like, the the choking choking issue. So I... I've always had an issue where food would go down really slow. And honestly, I thought that was kind of just a normal thing. Yeah. Yeah. That's why know. Sure. Yeah. And that's happened. Like, more times than I can count, like... And I've always had I I've never had issues before when I would actually take my time meeting. But I mean, even in boot camp, I've noticed it, but never got to the point where I I'd have to go to the Yeah. Okay. Thankfully. How often many times of month or a week or do you Do you have to, like, almost stop eating for a second and, like, clear your throat, drink some water just to get food to go down. Like, how often does that happen? Yeah. So
+```
+
+---
+
+### CHUNK 10
+
+- **ID:** 6789_TRANSCRIPT_5
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 750
+- **Chunk Index:** 6 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.982606
+
+**Text Preview (first 300 chars):**
+```
+month or a week or do you Do you have to, like, almost stop eating for a second and, like, clear your throat, drink some water just to get food to go down. Like, how often does that happen? Yeah. So that happens at least, like, every other day or every 2 days, like at least like 3 times a week. Okay...
+```
+
+**Full Text:**
+```
+month or a week or do you Do you have to, like, almost stop eating for a second and, like, clear your throat, drink some water just to get food to go down. Like, how often does that happen? Yeah. So that happens at least, like, every other day or every 2 days, like at least like 3 times a week. Okay. Where, you know, I just get back in the habit, You know, I'm just eating food, and then I'll feel it, I'm, like, oh, shit. Guess just gotta relax. Drink some water and then really slow it down. Yeah. I the same issue. Like, I'll I'll be eating like, eating fast. And again, it does I agree it comes from Boot camp where you're just, like, so used. You have, like, what 15 minutes eat entire plate of food. So you're just like. I remember 5 minutes. Very well. Yeah. It's been been 60 years. So... Yeah. So 5 minutes to stuff down a whole plate of food, You're trying to eat as much you can because you're, like, literally like, borderline, like not starving. But... Yeah. So you're just trying to get as much as you can in your body. Yeah. So definitely could be made worse because that habit went for 3 months. And then So, you still don't have a lot of time. Mh. And in the fleet, I I know even your job, like, there's times that you'll be out at Arlington National cemetery for... Got 5 minutes to eat. Yep. 3 5 stuffing down a sandwich that you got at the the P x. So only made worse, like, through your time in the marine corps, and and I think you you just... You told me, like, multiple times a week, you literally have to slow down, think of, like, almost actually think about eating. So if just... Yeah. I have to like, I have to manually like, some peep... Or most people, I'd imagine. You know, they just eat, you know, you just start eating, you don't really think about it. I really have to stops, slow down and think about it. Okay. Yeah. I mean, that... I mean, completely makes sense and Again, I think we look at the diagnosis that you got from the Walter while you were still in. Mh. I think with that, I think kinda how we make it connected to the Marine corps is is worsened by your time in the Marine corps, your your 4 years that you spent in, literally just like, being rushed pretty much your entire time and and actually causing these problems. So... Or worsening? No. One's worse. I'd like to clarify. I got diagnosed with that right after I got out in the Marine corps, but I was still on tri. I I was still on Tricare. But the event that made it worse was the marine corps. Know. Yeah. So I'll talk... Again, I'll talk to Christian. I think these things even a diagnosis after the marine corps, but caused by your talking to the marine corps. I think he's gonna... Like I said, he'll review these and he'll send him my way, like, this the statements and all that stuff. Yeah. I think, I think this will... I think this is something we can pursue. And you already have the diagnosis and all that stuff. So even though you were out of the Marine corps with the diagnosis,
+```
+
+---
+
+### CHUNK 11
+
+- **ID:** 6789_TRANSCRIPT_6
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 726
+- **Chunk Index:** 7 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.983591
+
+**Text Preview (first 300 chars):**
+```
+Yeah. I think, I think this will... I think this is something we can pursue. And you already have the diagnosis and all that stuff. So even though you were out of the Marine corps with the diagnosis, you were still on the the 6... I think, 6 months of Tricare following getting out of marine corps th...
+```
+
+**Full Text:**
+```
+Yeah. I think, I think this will... I think this is something we can pursue. And you already have the diagnosis and all that stuff. So even though you were out of the Marine corps with the diagnosis, you were still on the the 6... I think, 6 months of Tricare following getting out of marine corps that you get. So Okay. Again, all these statements we can add to later on. I'm trying to kinda Not trying to rush through it, but trying to get a good baseline for all of them, and then we can build it on these statements after you review them. So... Yeah. Next question was, are you experiencing any infectious disease symptoms and you put other infectious diseases? I'm a... That's mu Continue. Yeah. Experience. I... We'll spend some time on this 1. The muscular skeletal symptom. I saw Christian. I think a lot of stuff work... We'll be... You were... We'll we'll start with... I'll just go from the top. Let me see. Knee, and or lower leg? I think that was 1 that you said yes to. Correct? Yes. Okay. And were you seeing wall in service for these? So I'm... For specifically, my left ankle, that's mostly the 1 that I've had issues with. I... It was noted down in my final physical. Okay. I I've attempted to make appointment specifically for it. But towards the end, it just got so busy where I I really didn't have time. And then I was said you got rushed kinda out because the leave and terminal and all that stuff. Yeah. You went on terminal leave, I think 2 to 3 weeks prior to, like, when you thought you were. So Okay. Yeah. It it was like a whole month. Those. Yeah. So... Okay. So when did you start noticing the ankle injury? So it was it was right when Hen lee got to the Barracks. Okay. Because... And he's actually writing a a personal statement for me that he's gonna get to me tomorrow. Okay. He... We were repeating me and him, and we're doing a parking garage run So running up the parking garage and then down the parking garage and then doing some more exercises. And during 1 of our sprints up the parking garage, there's. Mh. There's a a broken speed bump where only like 1 lit like, about this big is still left. So you don't notice it. I was springs up there and a half my foot landed on it. The other half didn't So all my weight full sprint while going uphill. All on that ankle, that was the worst. I've ever pushed and I've twisted my ankles a lot. That was the worst I've ever had, started swelling up. Like, it was like a football, and I was off of it for probably a good a week or 2. I got Yeah. I was off of it for a week or 2. And then ever since then after the initial injury kinda healed and I could start walking on it. I've have noticed to that, I can't stretch it. Like, I can't like, if this is my foot, I can't stretch it like this way or that way without experiencing pain that lingers on for good 15 minutes. So loss of... So just lost of mobility. Yeah. Basically, and your range of motion is severely diminished Yes. Okay. Alright. And with my current
+```
+
+---
+
+### CHUNK 12
+
+- **ID:** 6789_TRANSCRIPT_7
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 722
+- **Chunk Index:** 8 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.983591
+
+**Text Preview (first 300 chars):**
+```
+experiencing pain that lingers on for good 15 minutes. So loss of... So just lost of mobility. Yeah. Basically, and your range of motion is severely diminished Yes. Okay. Alright. And with my current job, I'm the security guard at a at a mall. So I'm standing for good 8 hours of the day with an hour...
+```
+
+**Full Text:**
+```
+experiencing pain that lingers on for good 15 minutes. So loss of... So just lost of mobility. Yeah. Basically, and your range of motion is severely diminished Yes. Okay. Alright. And with my current job, I'm the security guard at a at a mall. So I'm standing for good 8 hours of the day with an hour lunch, it it becomes unbearable because it's standing on it for a long time. Also, causes it to to explain much more than my right leg. And I've actually had to make a reasonable accommodation request with my employer in order to satisfy what they deemed a disability. Okay. So roughly, I think Hen was there for bowel... He's been there for about a year, year and a half half a thing. He's been Mh. At the various, I think about a year. So you noticed about a year ago, cause from a Pt event that we repeating with another marine. And then had to take it easy for about 2 weeks while you were kind of trying to recover a little bit and then ever since, you've had a loss of like, range of motion, mobility that causes severe pain when you do move it in a direction, it does not want to be moved. And then you also have had to... And again, how it... That's goes into how it affects your life. And then on top of that, like, the job you're working, where you're standing, doing all these other things, causing some potential issues with your employer because you can't stand on it all the time or mh. You're limited what you can do because of the job that you're... That that you currently have and the injuries you sustained. Okay. I mean, it does. And and I'm also... Whenever I get home, I am unable to stand. I am like like, that 8 hours is the limit. If I try to cook dinner or I try to clean it, like, I can't do anything. I'm I'm bedridden for the rest of the day. Okay. Okay. Yeah. I'm gonna... Again the same thing. We can always add to this statement, but I think you've you've you've mentioned a lot of things of actually how it affects your life and how it impacts you and your normal stuff that you do. So kinda moving on to the next 1, unless you have something else on that 1. Okay. Unless... I mean, we can talk about knees a little Yeah. Yeah. Let's go over your me. Tell me a little bit about which which knee is it? So it's both knees. It's I'm gonna be honest. It's not very severe, but there's just there is mild pain whenever I go up stairs. And I live on the third floor of our apartment complex. So every day that I come back from work, you know, my feet are dead, my legs are dead, tired from work. It just makes it that much more worse. When I get back home. And do do you know of the specific injury that may have occurred? Or do you know? Can you... Give this... I hate when doctor's asked, but can you give me an estimate of when the pain started or a specific injury that may have caused it? It started about a about a year and a half before I got out. Okay. And do you know of a specific injury or just probably doing what you did in the marine corps. So it's just
+```
+
+---
+
+### CHUNK 13
+
+- **ID:** 6789_TRANSCRIPT_8
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 720
+- **Chunk Index:** 9 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.985584
+
+**Text Preview (first 300 chars):**
+```
+that may have caused it? It started about a about a year and a half before I got out. Okay. And do you know of a specific injury or just probably doing what you did in the marine corps. So it's just doing what I did. Okay. Yeah. So Just again to kinda recap some of this stuff, you being an infantry ...
+```
+
+**Full Text:**
+```
+that may have caused it? It started about a about a year and a half before I got out. Okay. And do you know of a specific injury or just probably doing what you did in the marine corps. So it's just doing what I did. Okay. Yeah. So Just again to kinda recap some of this stuff, you being an infantry marine. Going through the school of the infantry, like all the hikes, all the buddy rushing, all the the weight, the packs you were carrying there that weighed up upwards of price 70 pounds at different times. Mh hiking there. And then your job in the Marine corps color guard where at times, you were carrying a 45 pound, The colors for the marine corps, which are 45 pounds. Mh. Standing there for an hour or what... Or marching around at a funeral. And I've been on some of those funerals where it's over 2 miles that or it's like a mile and a half, 2 miles that you're walking, and then standing there afterwards, not being in a move, not being able to adjust, just being in pain, all these things are wear and tear on your body. Yeah. So just kind of put that in there for for... Like, what could have caused a lot of this stuff is is just the stuff that we put our bodies through, completely understand the... That not having a specific injury. I have I've kind of a similar thing where, like, it hurts to walk up upstairs for me. I'm 33. You shouldn't hurt... It shouldn't hurt to walk up upstairs. Like, yeah. So, yeah. For you, being out of the marine corps and dealing with this. This pain, walking upstairs, like third 3 levels, like, I again, lived at 3 story townhouse. I I understand I understand the struggle. So Yeah. What other what other... I think that will move on from that 1. Again, adding to all these statements later on as needed. Any other muscular skeletal, I think you put something, hand or finger. Or is it the flat plant fa feet pain? Oh, flat feet. So the the doc on my final physical, he mentioned that I had fallen arches. Okay. So that... That's another big thing... Same thing as my left foot, but it just makes it worse for both of my feet. Again, standing... My job is a stand there for 8 hours. It is extremely painful to to... Especially within the last 4 hours to stand around like that and same thing. Whenever I go home, I I can't do anything, and it's really hard to get up that next day. Yeah. Yeah. Not. That... Definitely understand. And again, I'm assuming this is kind of similar unless you know of a specific time that it really started hurting or, like, a specific email that may have caused it? After parade season. After my first parade season, what that was my second year at the Barracks. So I think that was 20 21. Okay. So, yeah. Parade season ends in... Or August, So sip let's just say September of 20 21, really started noticing. Mh. The pain standing there. Again, at a parade, stand there for 45 minutes to an hour or just standing there, not be out to move, Not downing Battalion drill. Yeah. Not to mention the 10... Almost 10 hours of
+```
+
+---
+
+### CHUNK 14
+
+- **ID:** 6789_TRANSCRIPT_9
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 749
+- **Chunk Index:** 10 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.985584
+
+**Text Preview (first 300 chars):**
+```
+standing there. Again, at a parade, stand there for 45 minutes to an hour or just standing there, not be out to move, Not downing Battalion drill. Yeah. Not to mention the 10... Almost 10 hours of Battalion drill every week that you're just standing there. Again, you were... I think if Not mistaken ...
+```
+
+**Full Text:**
+```
+standing there. Again, at a parade, stand there for 45 minutes to an hour or just standing there, not be out to move, Not downing Battalion drill. Yeah. Not to mention the 10... Almost 10 hours of Battalion drill every week that you're just standing there. Again, you were... I think if Not mistaken you with the Or bearer. Right? Mh. So Or Carrying a 45 pound flag with you causing that pain. I mean, yeah. Again, something that this is... So plant. This is something that they can give you, the Va can give you inserts, So unfortunate that that wasn't identified earlier because you could have gotten on, like, inserts for your feet. That's something that like when you see the Va doctor, like, getting those taken care of as well. Because that will help you down the road. I mean, it's not gonna, like completely take away the pain. Right, a fallen arches, but it could kind of at least make the pain somewhat getting close to bear. Right? Mh. Alright. Any other must severe skeletal issues? I mean, all of the same stuff with my back from having that, you know, the harness is around my shoulders. For the for the color guard harness and all that weight is, like, directly on the back. Okay. What is it like lower back or upper back? It's lower back. Red regularly, I will wake up And I won't be able, like, twist to 1 side or the other because it's just, like, something's so tighten there on my left side or my right... Usually is my left side. It's where I can't, like, twist this way it it's... It makes... III lose mobility for a good good while, at least, like, 2 or 3 hours. How much? And this kind goes to all the stuff we're talking about. Are you taking, like, Pro in mo as you pull... I'm your come how are you choking right here? Okay. How often would you say you're taking Ibuprofen? Daily, out, like, every 6 hours, 8 hours, whatever's is recommended? Are you pretty much just ibuprofen all day just to get get moving? I I'm on it pretty consistently throughout the day. This is 600 milligrams, and I usually take 2 in the morning and then 2 in the afternoon. Okay. Show that that's a lot of milligrams. Yeah. And yeah. That's... Like... Yeah. No. So basically, the... 1 of the things like, when we do... Like, when I usually do the a call I know you do with Christian. But when I do the initial call, 1 of the things I tell people is maybe don't take it for a day and see what how how your body feels. Right? Mh. Like what all hurts, Right? You might not you might even notice more. And I think going back to the back. So it's kinda moving through the process on this. I I know I don't know if you get any other chance to take a a dinner break, so try to move and give you a few minutes at the end to to do a dinner break, but... Or you can eat if you got food there, I'm good with it. I you're not gonna... Yeah. You're you're not gonna offend me or anything. So... But moving in the back... Yeah. And it and kind of the same thing, like, we talked about is like, you go through
+```
+
+---
+
+### CHUNK 15
+
+- **ID:** 6789_TRANSCRIPT_10
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 748
+- **Chunk Index:** 11 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.986582
+
+**Text Preview (first 300 chars):**
+```
+it. I you're not gonna... Yeah. You're you're not gonna offend me or anything. So... But moving in the back... Yeah. And it and kind of the same thing, like, we talked about is like, you go through boot camp. You're carrying 75 pounds worth of stuff around for up to a 20 k hike. So you have 05:10, 1...
+```
+
+**Full Text:**
+```
+it. I you're not gonna... Yeah. You're you're not gonna offend me or anything. So... But moving in the back... Yeah. And it and kind of the same thing, like, we talked about is like, you go through boot camp. You're carrying 75 pounds worth of stuff around for up to a 20 k hike. So you have 05:10, 15 and a 20 k hike So. And then you're doing all sorts of other buddy rushes, stuff like that, getting the The... I'm up He sees me, I'm down with a full comma load loads. Like, all this stuff takes in effect on your back. And then again, Carrying, a 45 pound, flag around... Isn't isn't something that's easy to do regardless of how much you're going to the... Trying to go to the gym and trying to work out, It's not easy. Especially when you gotta hold of it out for multiple national anthem, the leverage, it makes it feel about, like, hundred 20 pounds. Yeah. I see even the guys oh grady. I see a greedy now doing in. I'm like, But, yeah. Okay. I think you you kinda described about how it affects your day life. There's times. You literally have to, like, stop doing anything and relax just to Mh. Try to get some mobility back in. So... Yeah. I mean, that's that's definitely not good, plus taking Ibuprofen over like, what you just said, you're looking at 2400 milligrams. Right? A day if you're taking in the morning in the afternoon to a day. So again, not good for the body. Mh. What can you tell me any other mu skeletal issues? No. That's about it. Okay. Alright. I'm gonna move down the list? Alright. So I think I know where this one's at. I think we're actually on the last 1 unless you have more after this that you wanna talk about. Are you experiencing any psychological related symptoms? Yes. Tom? And I am... You and I talked on the phone little about this the other day. But can tell me about the incident that caused Ptsd. Whatever you're comfortable with. Again, this is 1 of those things, you can write a personal statement about and we don't have to talk about it, or if you're comfortable talking about it, you are more than welcome to talk about it. But I'm not trying to make you, like, uncomfortable in having you talk about it? Yeah. So This was at the this was in 20 20, couple months after I got to the Barr I think it was at the beginning of spring, summertime around Ben. And I ordered a steam from Amazon in order to steam out my uniform, but it came without all the parts So I put it on in the box and I start walking over to the metro because I didn't have a car then And I get on the green line, and I start moving up towards College Park. And because that's where the Amazon facility is. And while I'm right before I get the fort To, the on the green line. The station before it, a man walks on the the metro. And grabs me, like, grabs my genitals and up. So I get up grab him and push him off me, and I'm about ready to find. Like, you you pick the wrong guy. Like, you are about to get fucked up. And then you started backing up. And he was like, I'm gonna
+```
+
+---
+
+### CHUNK 16
+
+- **ID:** 6789_TRANSCRIPT_11
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 725
+- **Chunk Index:** 12 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.987581
+
+**Text Preview (first 300 chars):**
+```
+I get up grab him and push him off me, and I'm about ready to find. Like, you you pick the wrong guy. Like, you are about to get fucked up. And then you started backing up. And he was like, I'm gonna kill you. I'm gonna fucking I'm gonna fuck you up. You. He's saying all this threatening me. He was ...
+```
+
+**Full Text:**
+```
+I get up grab him and push him off me, and I'm about ready to find. Like, you you pick the wrong guy. Like, you are about to get fucked up. And then you started backing up. And he was like, I'm gonna kill you. I'm gonna fucking I'm gonna fuck you up. You. He's saying all this threatening me. He was calling me a fa. And then he backed up to the back of the train, and I stood next to this The only other person on the train was this woman wearing a yellow sunflower dress. And I just stood there, make sure he didn't do anything to her. And then the the man who walked on, pulled his pants down and started and masturbating. In the back of the train, while looking at me and calling me a fa, telling me he's gonna fucking kill me and shit. So I I, like froze, and I just stood there with that lady, and we got off on the next stop, and he stayed on the train, and I I didn't even have time to process. What what just happened. Like, I called the police. About 15 minutes afterwards and the metropolitan police. They opened up an investigation week into it. They meet me. They show me a video of the guy getting on the train, I confirm it, and then he's arrested in that same day, that man... He he did similar things, like, at least 6 other people. According to the court documents. And that I wasn't even able to go to court. I mean, I was given the time off work in order to, but I just... I I couldn't face it. Years after, because the... He didn't get the the trial didn't happen until... I I think... Either the end of 20 20... Yeah. It was the end of 20 22. So it took about 2 year... Over 2 years. And the this is the big thing, because I I feel like 1, I should have fucking killed him. I should've have stopped him. I should've have beaten the crap out of him, but I froze. And I blame myself. I blame myself for that. At anytime I think about it, and Constantly, this... That memory pops up whenever I have any... If anything in my life, makes me feel like I'm not doing enough. Like, I'm not man enough or I'm not doing what I should be that pops and into my head. And Because of that, I've seek counseling. I've synced now currently, I'm going... I'm about to start therapy. And I was seen by a psychiatrist for it as well. And in relation to that, I was diagnosed currently with severe anxiety and severe depression and prescribed a Z loft, which that's a whole another thing. I I tried taking the Z loft. And it would help while I took it, but if I forgot to take it 1 day, I would become an asshole to everybody I would lash out against my girlfriend. I would scream at the top of my lungs. I was really really unpleasant to be around So that's really damaged our relationship. That just... Let's see if it's a strain on everything. Extreme extreme strain. So I've stopped taking the medicine, and I I mean, I struggle constantly daily with thoughts of not being enough And with those, like I said earlier, the memories. And recently, I just tried to take the metro to go see the
+```
+
+---
+
+### CHUNK 17
+
+- **ID:** 6789_TRANSCRIPT_12
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 721
+- **Chunk Index:** 13 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.987581
+
+**Text Preview (first 300 chars):**
+```
+the medicine, and I I mean, I struggle constantly daily with thoughts of not being enough And with those, like I said earlier, the memories. And recently, I just tried to take the metro to go see the Aaron space museum with Nicole and her daughter. And I really didn't wanna go on the metro, but Nico...
+```
+
+**Full Text:**
+```
+the medicine, and I I mean, I struggle constantly daily with thoughts of not being enough And with those, like I said earlier, the memories. And recently, I just tried to take the metro to go see the Aaron space museum with Nicole and her daughter. And I really didn't wanna go on the metro, but Nicole didn't wanna drive her car all the way down there. So I agreed and since then I've been avoiding the that. But because it was for Vivian, her daughter, I got on with her and we're going through there, and we get to Fort To, and then it all comes back to me. Like, And then I look at the car number and the car number was the exact same car number where it happened in. So I just froze up in Nicole she was trying to get my attention. She was trying to get me the snap out of it. But until we got past like another 2 or 3 stops. I was just frozen gripping onto her and just scan, like, scanning everything, like freaked out And, yeah. It prevents me from taking the metro. It prevents me from... Really having a healthy relationship because even now, any anything that Nicole tries to help me with, if there's any spec of a way that I could take it as me, not being good enough. I blow up. I I distance myself. I don't... I I like... I'll act like a scared child to be honest. I'll just get away from her. I'll be alone. I'll isolate myself and then lash out at her if she tries to get close. And I mean, I don't go out and in crowds anymore. I don't go out at night alone I don't I just don't feel safe in public. And I don't I don't trust people Again, I don't go to crowds, like in Nicole, she loves going to concerts. And we've made so many plans to go to concerts. But I haven't been able to go. Like, I I couldn't bring myself to go, because I I'm scared that something's going to happen. I feel like something's going to happen to. Okay. I yeah. I We had talked a little bit about that previously. Mh. But what I will say is like, obviously I'm armada. A trained professional. I think you're, like, you're seeing you're seeing the people that you should be seeing to kinda help you through this. The best you can. Right? Like, So again, as all... Like, as long as you're you're for for your own good. Right? Like, doing, like, seeing people talking to people, like a trained professional that's about what you can do right now. So yeah. I don't I don't wanna, like, continue to dwell on it. But again, this is a state this is part of a statement that you think of something else that's affecting you. Since you Think of something else that's affecting you. Definitely, We can add that to the statement as we go. I do appreciate you, like, talking me about that. And any any any way I can assist, there are resources outside of the marine corps. Like, now that you're on the civilian side, there's still resources that are available. And I think you... You're getting some of those, but if there's additional resources that you would like, I can definitely work with you. If you... If you're
+```
+
+---
+
+### CHUNK 18
+
+- **ID:** 6789_TRANSCRIPT_13
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 685
+- **Chunk Index:** 14 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.988582
+
+**Text Preview (first 300 chars):**
+```
+still resources that are available. And I think you... You're getting some of those, but if there's additional resources that you would like, I can definitely work with you. If you... If you're interested in getting those resources as well. We have been on for about 45 minutes now. I think we've hit...
+```
+
+**Full Text:**
+```
+still resources that are available. And I think you... You're getting some of those, but if there's additional resources that you would like, I can definitely work with you. If you... If you're interested in getting those resources as well. We have been on for about 45 minutes now. I think we've hit up most of these things that we had talked about. Let me see. We'll make sure we're not missing anything. Knees ankles. Yeah. I think we we covered ankles. We covered knees. We covered the sexual assault. We covered the ear pain. We did add back in there. Anything else that you are kinda dealing with and just kinda... You've been sucking it up for years and you need, like, that needs to be addressed that you feel is is related to your service. At this time, I can't really think of anything else. No. Okay. Again, I I... So after this, this should after this wraps up. Christian should get a, like, basically, the whole thing sent to him, like, the whole script of everything. This is supposed to generate personal statements. And we kinda went through basically the steps of the personal statement. So roughly when the injury or when you noticed the pain. Kind of how it affects you. Any treatment that you've received, We kinda went through that on most of those. So it's supposed to generate your personal statements And basically, what we'll do is we'll send you, like, a word document with your personal statements on there. You can make any edits. Or you can be like, yep, That's correct. Or make let's this word it this way. You're more than welcome make those changes And then afterwards, I think a lot of this stuff you actually have documented in your record. Some of this stuff will have to look a little bit more into, like, the the diagnosis to make sure something's diagnosed for you. Do you have what's your Okay. What's your health care situation? Are you just using the Va right now? Va healthcare care? Yeah. Okay. Yeah. And those could be long waits. So this might be a little bit of a process, But we... What we can do is we can do... We can kinda step through with these claims. Right? So we can the ones that have a diagnosis, we can... Or documented in service with a diagnosis specifically. And we can start making those claims. And then the ones we're kinda waiting on so select the ear right now. We don't have a diagnosis for it. So I don't wanna submit that claim till we have the diagnosis. But I think with, like, the Ptsd anxiety portion, and and like and like depression. I think that is a claim we can start really quickly 2. Yeah. The... So I'm gonna be meeting with the Va again on the 20 first about a and they're gonna... That's when the diagnosis for Ptsd specifically is gonna happen. Okay. Okay. Yeah. So we can we can kinda start the process Kinda wait till the 20 first. So you described some pretty I I to look exactly at what the criteria for each rating is. Right? But there's a 30 50 70 percent rating for just in a hundred percent rating just for
+```
+
+---
+
+### CHUNK 19
+
+- **ID:** 6789_TRANSCRIPT_14
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 748
+- **Chunk Index:** 15 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.988582
+
+**Text Preview (first 300 chars):**
+```
+till the 20 first. So you described some pretty I I to look exactly at what the criteria for each rating is. Right? But there's a 30 50 70 percent rating for just in a hundred percent rating just for Ptsd. Mh. So kinda... If we can get that 1 rolling, you'll start getting, like, news Va is like, yea...
+```
+
+**Full Text:**
+```
+till the 20 first. So you described some pretty I I to look exactly at what the criteria for each rating is. Right? But there's a 30 50 70 percent rating for just in a hundred percent rating just for Ptsd. Mh. So kinda... If we can get that 1 rolling, you'll start getting, like, news Va is like, yeah. I mean, and and it's... You've been... You're being seen by their doctors now. So, like, there's, like, yeah. No real denying. News the the incident happened while in service. So that 1 I think should be pretty a lot easier. Than some of the other ones because some of the other ones it's like, a lot of the the wear and tear on our body, not necessarily specific moment. Right? So it can be tough sometimes to get that through. But either way, like, we'll work. We'll keep on working for this, and I I don't know if Christian told you this. My... Actually my first client, I've been working with him for almost 18 months now. The Va basically told him that they did not his claim when he first did it. So we've appealed to a higher level reviewer, and we are just in the waiting process. The Va can take some time. But we're I'm gonna stay... As until you say, I'm happy with this rating, whether that's 10 percent, 50 percent... 70 percent, a hundred percent I'm gonna work with you till then. Until you say, I'm good. I'm happy with this rating. So I do hope to... To get a quick answer from for you, man. I know it's it's not fun working with the Va. It's... And then some of this stuff, you're gonna go to a c and p exam and you're gonna have to re kinda rehash that stuff that you just talked about. And that's not necessarily gonna be easy keeping on talking to people about it. Right? You and I have known each other for 2 years now. So it might be, don't know if it's easier or more difficult to talk to someone you know about it. I don't know. I haven't been through that type of incident. But you're gonna to talk to someone potentially. You since it's... You've been seeing a Va doctor, they might not. But there's potential that when you do your exam, they're gonna wanna... They're gonna want you to talk to someone. Right? So... Yeah. What I'll ask though is before any C p exams, Give me a call man. So I've been driving back from Quan, but on the phone of someone while they're getting ready to go to ACP exam the next day. I've been on the phone at 07:30 in the morning before they went to ACP. So give me a call. I'll kinda talk you through, like, what you should should expect. For some of these exams, some of the questions that they should be asking, or like, what is it right? With that exam. Right? Like, if they're... If if the exam... If if a doctor, if you're being seen for muscular skeletal issue and a doctor isn't giving... Isn't doing a range of motion tests, probably not the right exam. Right? So I'll kinda walk you through some of that. It's kind some things you should say, some things you should maybe not say. Right? Yeah. So we'll walk through that I know
+```
+
+---
+
+### CHUNK 20
+
+- **ID:** 6789_TRANSCRIPT_15
+- **Patient ID:** 6789
+- **Type:** transcript
+- **Source File:** transcript.md
+- **Token Count:** 571
+- **Chunk Index:** 16 of 16
+- **Complete Document:** False
+- **Timestamp:** 2025-06-08T14:02:50.989582
+
+**Text Preview (first 300 chars):**
+```
+not the right exam. Right? So I'll kinda walk you through some of that. It's kind some things you should say, some things you should maybe not say. Right? Yeah. So we'll walk through that I know we got, like, 9 minutes. I don't know if you have any more dinner left. I don't wanna hold you up. Do you...
+```
+
+**Full Text:**
+```
+not the right exam. Right? So I'll kinda walk you through some of that. It's kind some things you should say, some things you should maybe not say. Right? Yeah. So we'll walk through that I know we got, like, 9 minutes. I don't know if you have any more dinner left. I don't wanna hold you up. Do you have any questions though? No. No questions right now. Okay. Cool. What I'll... As soon as I... I'm a text Christian tell him I just did a video chat on here with you. And as soon as I can't, I'll send you these statements. You can start reviewing them. Again, we got a little time, but the sooner we can get everything solidified, the better it's gonna be. Right? Yeah. So Yeah. And if there... There was any issues, I'll let you know with, like, the the software, hopefully it works, and we have takes... Could take a few hours out of your your schedule not having to write all these personal statements just by doing a 1 hour talk. So... Yeah. Yeah Man, I great talking to you man. The beard looks good. Sure. Thank you. I'm gonna be there tomorrow. At oh, yeah. For for brown. You try 11:30 on the parade day. Parade deck. Oh, prayed deck. Yeah. Yep. Wow. I didn't get parade dick. I wasn't your company guns. I'm just scared. Yeah. We're gonna do it at the bell at 11:30 cell. Yet. I, like, do you know if I should just sit in the the raft or should, like, stand up there with the rest on? Yes. Stand up. Sand up. Yeah. Like you... Don't stand in the formation, but like, off to the side, you're civilian now. You do what you want. Just don't... Yeah. Yeah. You're good. Come on over. Like, the marines will obviously be in the formation. You can stand off to the side, all that stuff. So... Yeah. You're good. Too easy. Alright, man. Well, was great talking to you and hopefully, your feet don't kill you this for the rest of your 4 hours that you're that you're on tonight. Yeah. Well, actually, they gave me a chair because of a because my reasonable accommodation request they were legally forced chair. Mh It's good. Gives a little break. A little break. But hey, man, It was great talking to you and I will I will see you tomorrow. Good. See you tomorrow. Thank you. Yeah. Absolutely. Alright. Bye. Bye."
+```
+
+---
+

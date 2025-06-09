@@ -2,7 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const Anthropic = require('@anthropic-ai/sdk');
-const { tools, executeTool, getStaffStats } = require('./tools');
+const { tools, executeTool } = require('./tools');
+const { systemPrompt } = require('./prompts');
 require('dotenv').config();
 
 // Initialize the app
@@ -18,6 +19,15 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
+// Enhanced logging function
+function logWithTimestamp(message, data = null) {
+  const timestamp = new Date().toISOString();
+  console.log(`[${timestamp}] ${message}`);
+  if (data) {
+    console.log(JSON.stringify(data, null, 2));
+  }
+}
+
 // Chat endpoint with streaming support
 app.post('/api/chat', async (req, res) => {
   try {
@@ -28,8 +38,9 @@ app.post('/api/chat', async (req, res) => {
       return res.status(400).json({ error: 'Invalid messages format' });
     }
     
-    console.log('Sending messages to Anthropic:', messages);
-    console.log('Streaming enabled:', stream);
+    logWithTimestamp('=== NEW CHAT REQUEST ===');
+    logWithTimestamp('Request type:', stream ? 'STREAMING' : 'NON-STREAMING');
+    logWithTimestamp('User message:', messages[messages.length - 1]?.content || 'N/A');
     
     if (stream) {
       // Set up SSE headers
@@ -41,14 +52,19 @@ app.post('/api/chat', async (req, res) => {
       });
       
       try {
+        // Validate API key before making request
+        if (!process.env.ANTHROPIC_API_KEY) {
+          throw new Error('ANTHROPIC_API_KEY is not configured');
+        }
+        
         // Create streaming response
         const stream = await anthropic.messages.create({
-          model: 'claude-3-7-sonnet-latest',
+          model: 'claude-sonnet-4-20250514',
           max_tokens: 2048,
           messages: messages,
           tools: tools,
           stream: true,
-          system: 'When using tools, do not include any explanatory text before or after the tool use. Simply use the tool and provide the results directly.'
+          system: systemPrompt
         });
         
         let fullContent = [];
@@ -64,6 +80,11 @@ app.post('/api/chat', async (req, res) => {
           // Handle different event types
           if (event.type === 'content_block_start') {
             if (event.content_block.type === 'tool_use') {
+              logWithTimestamp('🔧 TOOL USE STARTED', {
+                tool_id: event.content_block.id,
+                tool_name: event.content_block.name
+              });
+              
               // Save any accumulated text before starting tool use
               if (currentTextBlock) {
                 fullContent.push(currentTextBlock);
@@ -88,8 +109,12 @@ app.post('/api/chat', async (req, res) => {
               try {
                 currentToolUse.input = JSON.parse(currentToolUse.input);
                 toolUseBlocks.push(currentToolUse);
+                logWithTimestamp('🔧 TOOL USE COMPLETED', {
+                  tool_name: currentToolUse.name,
+                  tool_input: currentToolUse.input
+                });
               } catch (e) {
-                console.error('Error parsing tool input:', e);
+                logWithTimestamp('❌ Error parsing tool input:', e);
               }
               currentToolUse = null;
             } else if (currentTextBlock) {
@@ -104,17 +129,23 @@ app.post('/api/chat', async (req, res) => {
             
             // Check if we need to handle tool use
             if (toolUseBlocks.length > 0) {
+              logWithTimestamp('🔧 EXECUTING TOOLS', { count: toolUseBlocks.length });
+              
               // Execute tools
               const toolResults = [];
               for (const toolUse of toolUseBlocks) {
                 try {
-                  const result = executeTool(toolUse.name, toolUse.input);
+                  logWithTimestamp(`🔧 Executing tool: ${toolUse.name}`, toolUse.input);
+                  const result = await executeTool(toolUse.name, toolUse.input);
+                  logWithTimestamp(`✅ Tool result for ${toolUse.name}:`, result);
+                  
                   toolResults.push({
                     type: 'tool_result',
                     tool_use_id: toolUse.id,
                     content: result
                   });
                 } catch (error) {
+                  logWithTimestamp(`❌ Tool execution error for ${toolUse.name}:`, error.message);
                   toolResults.push({
                     type: 'tool_result',
                     tool_use_id: toolUse.id,
@@ -131,10 +162,11 @@ app.post('/api/chat', async (req, res) => {
               const assistantContent = [];
               
               // Add any text content that was accumulated
-              if (fullContent.length > 0 && fullContent.join('').trim()) {
+              const accumulatedText = fullContent.join('').trim();
+              if (accumulatedText) {
                 assistantContent.push({
                   type: 'text',
-                  text: fullContent.join('')
+                  text: accumulatedText
                 });
               }
               
@@ -145,6 +177,15 @@ app.post('/api/chat', async (req, res) => {
                   id: toolUse.id,
                   name: toolUse.name,
                   input: toolUse.input
+                });
+              }
+              
+              // Ensure we have content for the assistant message
+              if (assistantContent.length === 0) {
+                // If no text was accumulated, add an empty text block
+                assistantContent.push({
+                  type: 'text',
+                  text: ''
                 });
               }
               
@@ -160,20 +201,34 @@ app.post('/api/chat', async (req, res) => {
                 }
               ];
               
+              logWithTimestamp('🔄 Making follow-up request with tool results...');
+              logWithTimestamp('Assistant content being sent:', assistantContent);
+              logWithTimestamp('Tool results being sent:', toolResults);
+              
               // Make another streaming call with tool results
               const finalStream = await anthropic.messages.create({
-                model: 'claude-3-7-sonnet-latest',
+                model: 'claude-sonnet-4-20250514',
                 max_tokens: 2048,
                 messages: updatedMessages,
                 tools: tools,
                 stream: true,
-                system: 'When using tools, do not include any explanatory text before or after the tool use. Simply use the tool and provide the results directly.'
+                system: systemPrompt
               });
               
+              // Send signal that follow-up response is starting
+              res.write(`data: ${JSON.stringify({ type: 'followup_response_start' })}\n\n`);
+              
               // Stream the final response
+              logWithTimestamp('📤 Starting to stream final response...');
               for await (const event of finalStream) {
                 res.write(`data: ${JSON.stringify(event)}\n\n`);
+                
+                // Log text content being streamed
+                if (event.type === 'content_block_delta' && event.delta.type === 'text_delta') {
+                  logWithTimestamp('📝 Streaming text:', event.delta.text);
+                }
               }
+              logWithTimestamp('✅ Final response streaming completed');
             }
           }
         }
@@ -181,40 +236,63 @@ app.post('/api/chat', async (req, res) => {
         // Send done event
         res.write('data: [DONE]\n\n');
         res.end();
+        logWithTimestamp('✅ Streaming response completed');
         
       } catch (error) {
-        console.error('Streaming error:', error);
-        res.write(`data: ${JSON.stringify({ type: 'error', error: error.message })}\n\n`);
-        res.end();
+        logWithTimestamp('❌ Streaming error:', {
+          message: error.message,
+          stack: error.stack,
+          name: error.name
+        });
+        
+        // Check if response is still writable before sending error
+        if (!res.writableEnded) {
+          res.write(`data: ${JSON.stringify({ 
+            type: 'error', 
+            error: error.message || 'An unexpected error occurred during streaming' 
+          })}\n\n`);
+          res.end();
+        }
       }
       
     } else {
+      // Validate API key before making request
+      if (!process.env.ANTHROPIC_API_KEY) {
+        throw new Error('ANTHROPIC_API_KEY is not configured');
+      }
+      
       // Non-streaming response (existing code)
       const response = await anthropic.messages.create({
-        model: 'claude-3-7-sonnet-latest',
+        model: 'claude-sonnet-4-20250514',
         max_tokens: 2048,
         messages: messages,
         tools: tools,
-        system: 'When using tools, do not include any explanatory text before or after the tool use. Simply use the tool and provide the results directly.'
+        system: systemPrompt
       });
-      
-      console.log('Anthropic response:', response);
       
       // Check if Claude wants to use a tool
       if (response.stop_reason === 'tool_use') {
+        logWithTimestamp('🔧 Tool use detected in non-streaming response');
+        
         // Handle tool use
         const toolUseBlocks = response.content.filter(block => block.type === 'tool_use');
+        logWithTimestamp('🔧 Tool use blocks:', toolUseBlocks);
+        
         const toolResults = [];
         
         for (const toolUse of toolUseBlocks) {
           try {
-            const result = executeTool(toolUse.name, toolUse.input);
+            logWithTimestamp(`🔧 Executing tool: ${toolUse.name}`, toolUse.input);
+            const result = await executeTool(toolUse.name, toolUse.input);
+            logWithTimestamp(`✅ Tool result for ${toolUse.name}:`, result);
+            
             toolResults.push({
               type: 'tool_result',
               tool_use_id: toolUse.id,
               content: result
             });
           } catch (error) {
+            logWithTimestamp(`❌ Tool execution error for ${toolUse.name}:`, error.message);
             toolResults.push({
               type: 'tool_result',
               tool_use_id: toolUse.id,
@@ -237,13 +315,15 @@ app.post('/api/chat', async (req, res) => {
           }
         ];
         
+        logWithTimestamp('🔄 Making follow-up request with tool results...');
+        
         // Make another API call with the tool results
         const finalResponse = await anthropic.messages.create({
           model: 'claude-3-7-sonnet-latest',
           max_tokens: 2048,
           messages: updatedMessages,
           tools: tools,
-          system: 'When using tools, do not include any explanatory text before or after the tool use. Simply use the tool and provide the results directly.'
+          system: systemPrompt
         });
         
         // Extract text content from the final response
@@ -255,6 +335,7 @@ app.post('/api/chat', async (req, res) => {
             .join('');
         }
         
+        logWithTimestamp('Final response text:', responseText);
         res.json({ response: responseText });
       } else {
         // Extract text content from the response (no tool use)
@@ -266,25 +347,35 @@ app.post('/api/chat', async (req, res) => {
             .join('');
         }
         
+        logWithTimestamp('Response text (no tools):', responseText);
         res.json({ response: responseText });
       }
     }
     
   } catch (error) {
-    console.error('Error calling Anthropic API:', error);
-    res.status(500).json({ 
-      error: 'Error processing your request', 
-      details: error.message 
+    logWithTimestamp('❌ API Error:', {
+      message: error.message,
+      stack: error.stack,
+      name: error.name,
+      status: error.status
     });
+    
+    // Check if response has already been sent
+    if (!res.headersSent) {
+      res.status(500).json({ 
+        error: 'Error processing your request', 
+        details: error.message || 'An unexpected error occurred'
+      });
+    }
   }
 });
 
 // Start the server
 app.listen(PORT, () => {
-  const staffStats = getStaffStats();
-  console.log(`Server running on http://localhost:${PORT}`);
-  console.log('Make sure to set your ANTHROPIC_API_KEY in the .env file');
-  console.log(`Staff directory loaded with ${staffStats.count} employees across ${staffStats.departments} departments`);
-  console.log('Available tools: Staff Directory Lookup, Company Calculator');
-  console.log('Streaming support: Enabled');
+  logWithTimestamp(`🚀 Server running on http://localhost:${PORT}`);
+  logWithTimestamp('Make sure to set your ANTHROPIC_API_KEY, OPENAI_API_KEY, and PINECONE_API_KEY in the .env file');
+  logWithTimestamp(`Available tools: ${tools.map(t => t.name).join(', ')}`);
+  logWithTimestamp('RAG System: Enabled');
+  logWithTimestamp('Streaming support: Enabled');
+  logWithTimestamp('Enhanced logging: Enabled');
 }); 

@@ -11,6 +11,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add streaming toggle
     let streamingEnabled = true;
 
+    // Enhanced logging function for frontend
+    function logFrontend(message, data = null) {
+        const timestamp = new Date().toISOString();
+        console.log(`[FRONTEND ${timestamp}] ${message}`);
+        if (data) {
+            console.log(data);
+        }
+    }
+
     // Function to format text content (preserve line breaks and basic formatting)
     function formatContent(content) {
         // Convert newlines to <br> tags and preserve spaces
@@ -93,6 +102,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to handle streaming response
     async function sendMessageWithStreaming(userMessage) {
+        logFrontend('=== STARTING STREAMING REQUEST ===');
+        logFrontend('User message:', userMessage);
+        
         // Add user message to chat
         addMessage('user', userMessage);
         
@@ -110,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let isToolUse = false;
         let pendingText = '';  // Buffer for text that might be tool-related
         let hasSeenToolUse = false;
+        let toolCallCount = 0;
         
         // Add a placeholder to conversation history for the assistant's response
         conversationHistory.push({ role: 'assistant', content: '' });
@@ -138,6 +151,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 throw new Error('API request failed');
             }
             
+            logFrontend('✅ API response received, starting to process stream...');
+            
             const reader = response.body.getReader();
             const decoder = new TextDecoder();
             let buffer = '';
@@ -154,7 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     if (line.startsWith('data: ')) {
                         const data = line.slice(6);
                         if (data === '[DONE]') {
-                            // Stream finished
+                            logFrontend('🏁 Stream finished');
                             break;
                         }
                         
@@ -175,7 +190,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 }
                             } else if (event.type === 'content_block_start') {
                                 if (event.content_block.type === 'tool_use') {
+                                    toolCallCount++;
                                     hasSeenToolUse = true;
+                                    logFrontend(`🔧 TOOL CALL #${toolCallCount} STARTED:`, {
+                                        tool_name: event.content_block.name,
+                                        tool_id: event.content_block.id
+                                    });
                                     // Clear any pending text that was just explaining the tool use
                                     pendingText = '';
                                 }
@@ -193,12 +213,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                     updateMessage(messageId, accumulatedContent);
                                 }
                             } else if (event.type === 'tool_execution') {
+                                logFrontend('🔧 TOOL EXECUTION EVENT:', event.tool_results);
                                 // Tool was executed, continue processing
                             } else if (event.type === 'error') {
                                 throw new Error(event.error);
                             }
                         } catch (e) {
-                            console.error('Error parsing SSE data:', e);
+                            logFrontend('❌ Error parsing SSE data:', e);
                         }
                     }
                 }
@@ -206,9 +227,11 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Update conversation history with the final content
             conversationHistory[assistantHistoryIndex].content = accumulatedContent || '(Used tool to get information)';
+            logFrontend('✅ Streaming complete. Final content:', accumulatedContent);
+            logFrontend(`Total tool calls made: ${toolCallCount}`);
             
         } catch (error) {
-            console.error('Error:', error);
+            logFrontend('❌ Streaming error:', error);
             updateMessage(messageId, 'Sorry, there was an error processing your request.');
             // Update the conversation history with error message
             conversationHistory[assistantHistoryIndex].content = 'Sorry, there was an error processing your request.';
@@ -217,11 +240,15 @@ document.addEventListener('DOMContentLoaded', () => {
             sendButton.disabled = false;
             userInput.disabled = false;
             userInput.focus();
+            logFrontend('🔓 UI re-enabled');
         }
     }
 
     // Function to send message without streaming (existing functionality)
     async function sendMessageNonStreaming(userMessage) {
+        logFrontend('=== STARTING NON-STREAMING REQUEST ===');
+        logFrontend('User message:', userMessage);
+        
         // Add user message to chat
         addMessage('user', userMessage);
         
@@ -259,6 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             
             const data = await response.json();
+            logFrontend('✅ API response received:', data);
             
             // Remove loading indicator
             removeLoadingIndicator();
@@ -267,7 +295,7 @@ document.addEventListener('DOMContentLoaded', () => {
             addMessage('assistant', data.response);
             
         } catch (error) {
-            console.error('Error:', error);
+            logFrontend('❌ Non-streaming error:', error);
             removeLoadingIndicator();
             addMessage('system', 'Sorry, there was an error processing your request.');
         } finally {
@@ -283,6 +311,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const userMessage = userInput.value.trim();
         
         if (!userMessage) return;
+        
+        logFrontend(`📤 Sending message via ${streamingEnabled ? 'STREAMING' : 'NON-STREAMING'} mode`);
         
         if (streamingEnabled) {
             await sendMessageWithStreaming(userMessage);
@@ -315,9 +345,13 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('streaming-toggle').addEventListener('change', (e) => {
         streamingEnabled = e.target.checked;
-        console.log('Streaming enabled:', streamingEnabled);
+        logFrontend('⚙️ Streaming mode changed:', streamingEnabled ? 'ENABLED' : 'DISABLED');
     });
     
     // Focus input on load
     userInput.focus();
+    
+    // Log initial state
+    logFrontend('🚀 Chat interface initialized');
+    logFrontend('Initial conversation history:', conversationHistory);
 }); 

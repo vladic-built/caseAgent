@@ -1,0 +1,7 @@
+   - The types of content in the database are:
+    - Patient Information as patient_information
+    - Vital Signs as vital_signs
+    - Past Medical History as past_medical_history
+    - Lab Results as lab_results
+    - Diagnostic Imaging as diagnostic_imaging
+    - Transcript as transcript
